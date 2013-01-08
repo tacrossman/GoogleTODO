@@ -1,1 +1,28 @@
-define("app",[],function(){var e=function(){};return e.prototype={},e}),requirejs.config({baseUrl:"/js",paths:{},shim:{}}),require(["app"],function(e){window.bTask=new e}),define("main",function(){});
+requirejs.config({
+  baseUrl: 'js',
+
+  paths: {
+    text: 'lib/text'
+  },
+
+  shim: {
+    'lib/underscore-min': {
+      exports: '_'
+    },
+    'lib/backbone-min': {
+      deps: ['lib/underscore-min']
+    , exports: 'Backbone'
+    },
+    'app': {
+      deps: ['lib/underscore-min', 'lib/backbone-min']
+    }
+  }
+});
+
+require([
+  'app'
+],
+
+function(App) {
+  window.bTask = new App();
+});

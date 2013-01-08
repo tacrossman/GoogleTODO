@@ -26,8 +26,7 @@ define(['config'], function(config) {
       var authTimeout;
 
       if (authResult && !authResult.error) {
-        // Schedule a check when the authentication token expires
-        if (authResult.expires_in) {
+        if(authResult.expires_in){
           authTimeout = (authResult.expires_in - 5 * 60) * 1000;
           setTimeout(checkAuth, authTimeout);
         }
@@ -36,16 +35,16 @@ define(['config'], function(config) {
         $('#signed-in-container').show();
       } else {
         if (authResult && authResult.error) {
-          // TODO: Show error
-          console.error('Unable to sign in:', authResult.error);
+          console.error('no sign in for you fucker:', authResult.error);
         }
 
         app.views.auth.$el.show();
       }
+
     }
 
-    this.checkAuth = function() {
-      gapi.auth.authorize({ client_id: config.clientId, scope: config.scopes, immediate: false }, handleAuthResult);
+    this.checkAuth = function(){
+      gapi.auth.authorize({ client_id: config.clientId, scope: config.scopes, immediate: false}, handleAuthResult);
     };
 
     handleClientLoad();

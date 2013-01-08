@@ -1,0 +1,29 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run-script', 'grunt' ]
+2 info using npm@1.1.66
+3 info using node@v0.8.15
+4 verbose read json /Users/thomas/Sites/Google-TODO/package.json
+5 verbose run-script [ 'pregrunt', 'grunt', 'postgrunt' ]
+6 info pregrunt btask@0.0.1
+7 info grunt btask@0.0.1
+8 verbose unsafe-perm in lifecycle true
+9 silly exec sh "-c" "node_modules/.bin/grunt"
+10 silly sh,-c,node_modules/.bin/grunt,/Users/thomas/Sites/Google-TODO spawning
+11 info btask@0.0.1 Failed to exec grunt script
+12 error btask@0.0.1 grunt: `node_modules/.bin/grunt`
+12 error `sh "-c" "node_modules/.bin/grunt"` failed with 2
+13 error Failed at the btask@0.0.1 grunt script.
+13 error This is most likely a problem with the btask package,
+13 error not with npm itself.
+13 error Tell the author that this fails on your system:
+13 error     node_modules/.bin/grunt
+13 error You can get their info via:
+13 error     npm owner ls btask
+13 error There is likely additional logging output above.
+14 error System Darwin 11.4.2
+15 error command "node" "/usr/local/bin/npm" "run-script" "grunt"
+16 error cwd /Users/thomas/Sites/Google-TODO
+17 error node -v v0.8.15
+18 error npm -v 1.1.66
+19 error code ELIFECYCLE
+20 verbose exit [ 1, true ]

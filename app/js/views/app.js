@@ -1,26 +1,26 @@
 define([
-	'text!templates/app.html'
+  'text!templates/app.html'
 ],
 
-function(template){
-	var AppView = Backbone.View.extend({
-		id: 'main',
-		tagName: 'div',
-		className: 'container-fluid',
-		el: 'body',
-		template: _.template(template),
-		events: {
+function(template) {
+  var AppView = Backbone.View.extend({
+    id: 'main',
+    tagName: 'div',
+    className: 'container-fluid',
+    el: 'body',
+    template: _.template(template),
 
-		},
-		initialize: function() {
+    events: {
+    },
 
-		},
-		render: function() {
-			this.$el.html(this.template());
-			return this;
-		}
-	});
+    initialize: function() {
+    },
 
-	return AppView;
+    render: function() {
+      this.$el.html(this.template());
+      return this;
+    }
+  });
 
+  return AppView;
 });
